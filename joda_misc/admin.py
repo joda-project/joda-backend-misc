@@ -1,13 +1,12 @@
 from django.contrib import admin
 
+from joda_core.documents.admin import DocumentsAdmin
 from joda_misc.models import MiscDocument, MiscType
 
 
-class MiscDocumentsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title')
-    list_filter = ['created_at', 'misc_type']
-    search_fields = ['title', 'misc_type', 'tags']
-    filter_horizontal = ['tags']
+class MiscDocumentsAdmin(DocumentsAdmin):
+    list_filter = ['misc_type', 'created_at', 'changed_at']
+    search_fields = ['title', 'misc_type', 'notes', 'tags']
 
 
 class MiscTypesAdmin(admin.ModelAdmin):
