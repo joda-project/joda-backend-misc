@@ -1,4 +1,8 @@
 __pycache__
 /dist
+/htmlcov
+/joda
+/joda_core
 /joda_misc.egg-info
+.coverage
 migrations

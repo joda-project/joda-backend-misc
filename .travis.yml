@@ -1,0 +1,19 @@
+language: python
+python: "3.5"
+cache: pip
+
+before_install:
+  - pip install --upgrade pip
+  - pip install codecov
+
+install:
+  - git clone https://github.com/joda-project/joda-backend.git
+  - pip install -r joda-backend/requirements.txt
+  - ln -s joda-backend/joda joda
+  - ln -s joda-backend/joda_core joda_core
+
+script:
+  - coverage run runtests.py
+
+after_success:
+  - codecov
