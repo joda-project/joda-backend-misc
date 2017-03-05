@@ -1,6 +1,6 @@
 import os
 
-VERSION = (0, 1, 0, 'alpha', 0)
+VERSION = (0, 1, 0, 'alpha', 1)
 
 default_app_config = 'joda_misc.apps.MiscConfig'
 module_path = os.path.dirname(os.path.abspath(__file__))
