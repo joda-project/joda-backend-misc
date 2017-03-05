@@ -1,18 +1,30 @@
 import os
 from setuptools import find_packages, setup
 
+import joda_misc
+
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
-with open(os.path.join(os.path.dirname(__file__), 'VERSION')) as version_file:
-    VERSION = version_file.read().strip()
+
+def get_version(version):
+    """Return a PEP 440-compliant version number from VERSION."""
+    main = '.'.join(str(x) for x in version[:3])
+    sub = ''
+
+    if version[3] != 'final' and version[4] != 0:
+        mapping = {'alpha': 'a', 'beta': 'b', 'rc': 'rc'}
+        sub = mapping[version[3]] + str(version[4])
+
+    return main + sub
+
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='joda-misc',
-    version=VERSION,
+    version=get_version(joda_misc.VERSION),
     packages=find_packages(),
     include_package_data=True,
     license='AGPL 3.0 License',

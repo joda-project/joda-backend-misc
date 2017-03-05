@@ -1,10 +1,9 @@
 import os
-from joda.version import get_version
+
+VERSION = (0, 1, 0, 'alpha', 0)
 
 default_app_config = 'joda_misc.apps.MiscConfig'
-
-version = get_version(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
+module_path = os.path.dirname(os.path.abspath(__file__))
 
 model_name = 'MiscDocument'
 item_name = 'misc-document'
