@@ -8,3 +8,4 @@ module_path = os.path.dirname(os.path.abspath(__file__))
 model_name = 'MiscDocument'
 item_name = 'misc-document'
 item_group = 'misc-documents'
+new_item_str = 'New Miscellaneous Document'
