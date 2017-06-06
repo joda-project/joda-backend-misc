@@ -32,7 +32,8 @@ if not settings.configured:
             'joda_core',
             'joda_misc',
         ),
-        MIDDLEWARE_CLASSES=()
+        MIDDLEWARE_CLASSES=(),
+        AUTH_USER_MODEL='joda_core.User'
     )
 
 DEFAULT_TEST_APPS = [
