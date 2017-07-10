@@ -6,4 +6,5 @@ __pycache__
 /joda_core
 /joda_misc.egg-info
 .coverage
+*.mo
 migrations

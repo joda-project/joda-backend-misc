@@ -1,4 +1,5 @@
 from django.contrib import admin, messages
+from django.utils.translation import ugettext_lazy as _
 
 from joda_core.documents.admin import DocumentsAdmin
 from joda_misc.models import MiscDocument, MiscType
@@ -19,7 +20,7 @@ class MiscTypesAdmin(admin.ModelAdmin):
         print(selected)
         if (selected and str(MiscType.DEFAULT_PK) in selected) \
                 or (obj and obj.pk == MiscType.DEFAULT_PK):
-            message = 'The first (default) type can not be deleted.'
+            message = _('The first (default) type can not be deleted.')
             self.message_user(request, message, messages.INFO)
             return False
 
