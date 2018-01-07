@@ -25,7 +25,7 @@ class MiscType(models.Model):
 
 class MiscDocument(Document):
     misc_type = models.ForeignKey(
-        MiscType, blank=False, default=MiscType.DEFAULT_PK,
+        MiscType, blank=False, on_delete=models.PROTECT, default=MiscType.DEFAULT_PK,
         verbose_name=_('miscellaneous document type'))
 
     class Meta:
