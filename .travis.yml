@@ -13,6 +13,7 @@ install:
   - ln -s joda-backend/joda_core joda_core
 
 script:
+  - django-admin compilemessages -l sl
   - coverage run runtests.py
 
 after_success:

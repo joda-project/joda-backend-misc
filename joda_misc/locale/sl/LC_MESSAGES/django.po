@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-09 19:27+0200\n"
+"POT-Creation-Date: 2018-07-29 17:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "New Miscellaneous Document"
 msgstr "Nov ostali dokument"
 
-#: admin.py:23
+#: admin.py:22
 msgid "The first (default) type can not be deleted."
 msgstr "Prvega (privzetega) tipa ni mogoče izbrisati."
 
@@ -31,22 +31,26 @@ msgstr "Prvega (privzetega) tipa ni mogoče izbrisati."
 msgid "Miscellaneous Documents"
 msgstr "Ostali dokumenti"
 
-#: models.py:11
+#: models.py:16
 msgid "name"
 msgstr "ime"
 
-#: models.py:14 models.py:29
+#: models.py:19 models.py:39
 msgid "miscellaneous document type"
 msgstr "tip ostalih dokumentov"
 
-#: models.py:15
+#: models.py:20
 msgid "miscellaneous document types"
 msgstr "tipi ostalih dokumentov"
 
-#: models.py:32
+#: models.py:28
+msgid "default, can not be deleted"
+msgstr "privzeto, ni mogoče izbrisati"
+
+#: models.py:42
 msgid "miscellaneous document"
 msgstr "ostali dokument"
 
-#: models.py:33
+#: models.py:43
 msgid "miscellaneous documents"
 msgstr "ostali dokumenti"

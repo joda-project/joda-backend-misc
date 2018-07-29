@@ -17,7 +17,6 @@ class MiscTypesAdmin(admin.ModelAdmin):
         # If we're running the bulk delete action, estimate the number
         # of objects after we delete the selected items
         selected = request.POST.getlist(admin.helpers.ACTION_CHECKBOX_NAME)
-        print(selected)
         if (selected and str(MiscType.DEFAULT_PK) in selected) \
                 or (obj and obj.pk == MiscType.DEFAULT_PK):
             message = _('The first (default) type can not be deleted.')
